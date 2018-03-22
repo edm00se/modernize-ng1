@@ -1,0 +1,22 @@
+{
+  "name": "ng1-parcel",
+  "version": "1.0.0",
+  "description": "a sample Angular 1.x app for getting set up with parcel bundler",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html --open",
+    "prebuild": "echo 'should use ng-annotate here...'",
+    "build": "parcel build index.html --public-url ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Eric McCormick (https://ericmccormick.io/)",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.4.14"
+  },
+  "devDependencies": {
+    "ng-annotate": "1.2.2",
+    "parcel-bundler": "1.6.2"
+  }
+}

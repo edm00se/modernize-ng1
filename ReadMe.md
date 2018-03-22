@@ -2,6 +2,15 @@
 
 This is an attempt to parse down the work needed to get an AngularJS 1.x application to work with Parcel bundler. The intention is to migrate a production app, but first, baby steps are needed
 
+# NOTE:
+
+I currently don't expect this to work... at least as things are _today_. Parcel (and contributors) look to be addressing things such as dealing with older vendor libs (old versions of jQuery for instance), web fonts (like Font Awesome), and more. I fully expect this will work one day, it's just not today.
+
+I took an older Angular 1.x demo app, imported it into a fork of this repo on codesandbox.io, and attempted to get things working. Some things work better than expected, such as Bootstrap 3.x's CSS being applied, some things don't at all, like Font Awesome, ui-router with the separate html partials, and I'm guessing more.
+
+For those curious, here's the project on codesandbox:
+https://codesandbox.io/s/8yqrnoz5pl
+
 ## Installation
 
 - `git clone`

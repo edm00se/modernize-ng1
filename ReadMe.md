@@ -1,15 +1,19 @@
-# AngularJS 1.x With Parcel Bundler
+# Modernize AngularJS 1.x With a Bundler
 
-This is an attempt to parse down the work needed to get an AngularJS 1.x application to work with Parcel bundler. The intention is to migrate a production app, but first, baby steps are needed
+This is an attempt to parse down the work needed to get an AngularJS 1.x application to work with a modern bundler. The intention is to migrate a production app, but first, baby steps are needed
 
-# NOTE:
+## NOTE:
 
-I currently don't expect this to work... at least as things are _today_. Parcel (and contributors) look to be addressing things such as dealing with older vendor libs (old versions of jQuery for instance), web fonts (like Font Awesome), and more. I fully expect this will work one day, it's just not today.
+I currently don't expect this to work with Parcel (my leading favorite)... at least as things are _today_. Parcel (and contributors) look to be addressing things such as dealing with older vendor libs (old versions of jQuery for instance), web fonts (like Font Awesome), and more. I fully expect this will work one day, it's just not today.
 
 I took an older Angular 1.x demo app, imported it into a fork of this repo on codesandbox.io, and attempted to get things working. Some things work better than expected, such as Bootstrap 3.x's CSS being applied, some things don't at all, like Font Awesome, ui-router with the separate html partials, and I'm guessing more.
 
 For those curious, here's the project on codesandbox:
 https://codesandbox.io/s/8yqrnoz5pl
+
+## Next Up: Webpack
+
+Webpack 4 strives is faster and requires no config for an initial use, so hopefully its ecosystem which has over time accumulated much to help with AngularJS 1.x applications can be of use. Hopefully I don't go down too large of a configuration rabbit hole, but if so, so be it.
 
 ## Installation
 

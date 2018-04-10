@@ -1,0 +1,11 @@
+/*
+ * temporarily going with a CDN solution
+ * as this is a known issue w/ Font Awesome 4.x and Parcel
+ * ref: https://github.com/parcel-bundler/parcel/issues/763
+ */
+// $fa-font-path: '~font-awesome/fonts';
+// @import '~font-awesome/scss/font-awesome.scss';
+
+@import 'styles/animation';
+@import 'styles/app.scss';
+@import 'styles/about.scss';

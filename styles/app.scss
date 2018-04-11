@@ -1,0 +1,23 @@
+body {
+  padding-top: 70px; /* support for navbar-fixed-top */
+}
+.navbar-nav.navbar-right:last-child {
+  margin-right: inherit;
+}
+
+div[role='navigation'] > span > span > span {
+  padding: 0.5rem;
+}
+
+.list-group-striped li:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.floatRight {
+  position: relative;
+  float: right;
+}
+
+.list-inline > li {
+  margin-left: 5px;
+}

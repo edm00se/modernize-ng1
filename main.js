@@ -1,11 +1,25 @@
-console.log("This is just a test");
+// libs
 
-import 'angular'
+import 'angular';
+import 'angular-sanitize';
+import 'angular-messages';
+import '@uirouter/angularjs';
+import 'ng-tags-input';
 
-const app = angular.module('myApp', [])
-.controller('MyCtrl', ['$http', function($http) {
-  const vm = this;
+// app
+import './js/helpers';
+import './js/app';
+import './js/directives';
+import './js/filters';
+import './js/services';
+import './js/characterControllers';
+import './js/houseControllers';
 
-  vm.something = 'hello world!';
+// scss
+import './main.scss';
 
-}]);
+// funky libs
+const $ = require('jquery');
+window.$ = $;
+window.jQuery = $;
+require('bootstrap');

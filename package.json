@@ -8,6 +8,7 @@
     "dev": "parcel src/index.html --no-cache --open",
     "prebuild": "npm run clean && echo 'should use ng-annotate here...'",
     "build": "parcel build src/index.html --public-url . --no-cache",
+    "deploy": "npm run build && gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -33,6 +34,7 @@
     "postcss-modules": "1.1.0"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "parcel-bundler": "1.7.0",
     "rimraf": "2.6.2"
   }

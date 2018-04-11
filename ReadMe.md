@@ -24,7 +24,9 @@ Webpack 4 strives is faster and requires no config for an initial use, so hopefu
 
 - `npm run dev` executes `parcel` (the default `serve` command)
 - `npm run build executes `parcel build` with the `--public-url` flag set to `./`, so as to preserve path relative, works by just serving the contents of the `dist/` output directory
-- `TODO:` use `ng-annotate` (or similar tool) to process the source files and scrub correctly, as the initial commit's version of things didn't work correctly when a dep was missing (the only one)
+- `TODO:` automagically use `ng-annotate` (or similar tool) to process the source files and scrub correctly, as 
+the 
+initial commit's version of things didn't work correctly when a dep was missing (the only one)
 
 ## History
 

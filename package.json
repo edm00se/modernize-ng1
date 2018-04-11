@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "dev": "parcel index.html --open --no-cache",
+    "dev": "parcel --open",
     "prebuild": "npm run clean && echo 'should use ng-annotate here...'",
-    "build": "parcel build index.html --public-url . --no-cache",
+    "build": "parcel build index.html --public-url .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

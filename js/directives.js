@@ -13,11 +13,11 @@ angular
     return {
       restrict: 'E',
       template: fs.readFileSync('./partials/nav.html', 'utf8'),
-      controller: function($scope, $location) {
+      controller: ["$scope", "$location", function($scope, $location) {
         $scope.isActive = function(route) {
           return route === $location.path();
         };
-      }
+      }]
     };
   })
 

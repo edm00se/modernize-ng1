@@ -1,8 +1,7 @@
 {
   "name": "modernize-ng1",
   "version": "1.0.0",
-  "description":
-    "a sample Angular 1.x app for getting set up with parcel bundler...\n\nnow adapted to use my app of Ice and Fire front-end, for a non-trivial example",
+  "description": "a sample Angular 1.x app for getting set up with parcel bundler...\n\nnow adapted to use my app of Ice and Fire front-end, for a non-trivial example",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",

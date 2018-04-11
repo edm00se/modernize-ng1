@@ -11,10 +11,6 @@ I took an older Angular 1.x demo app, imported it into a fork of this repo on co
 For those curious, here's the project on codesandbox:
 https://codesandbox.io/s/8yqrnoz5pl
 
-## Next Up: Webpack
-
-Webpack 4 strives is faster and requires no config for an initial use, so hopefully its ecosystem which has over time accumulated much to help with AngularJS 1.x applications can be of use. Hopefully I don't go down too large of a configuration rabbit hole, but if so, so be it.
-
 ## Installation
 
 - `git clone`

@@ -1,0 +1,35 @@
+<div id="uiContainer" class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title"><i class="fa fa-users floatRight"></i>Characters of the Seven Kingdoms of Westeros</h3>
+				</div>
+				<ul class="list-group list-group-striped">
+					<li class="list-group-item" ng-repeat="character in charactersOfWesteros | startFrom : curPage*pageQty | limitTo:pageQty">
+						<!-- <a ng-href="#/characters/{{ character.unid }}" title="{{ character.unid }}">{{character.charFirstName}}&nbsp;{{character.charLastName}}</a> -->
+						<a ui-sref="characters.item({item: character.unid})" title="{{ character.unid }}">{{character.charFirstName}}&nbsp;{{character.charLastName}}</a>
+						<a href="#" class="btn btn-danger pull-right" ng-really-message="Are you sure you want to delete this character from Westeros?"
+						 ng-really-click="removecharacter(character.unid)"><i class="fa fa-lg fa-trash-o"></i></a>
+						<br />{{character.title}}, House {{character.house}}
+					</li>
+				</ul>
+				<div class="panel-footer col-xs-12">
+					<nav>
+						<ul class="pager">
+							<li class="previous" ng-class="{'disabled': curPage <= 0}">
+								<a ng-click="curPage = curPage - 1" ng-disabled="curPage <= 0" href=""><span aria-hidden="true">&larr;</span> Previous</a>
+							</li>
+							<span ng-bind="(curPage+1) + '/' + numberOfPages()"></span>
+							<li class="next" ng-class="{'disabled': curPage >= charactersOfWesteros.length/pageQty-1}">
+								<a ng-click="curPage = curPage + 1" ng-disabled="curPage >= charactersOfWesteros.length/pageQty-1" href="">Next <span aria-hidden="true">&rarr;</span></a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- single character content -->
+		<div ui-view class="col-md-6 col-md-offset-2"></div>
+	</div>
+</div>

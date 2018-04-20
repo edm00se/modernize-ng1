@@ -7,8 +7,9 @@
     "clean": "rimraf dist",
     "dev": "parcel ./src/index.html --no-cache --open",
     "build": "parcel build ./src/index.html --public-url . --no-cache",
+    "build:travis": "parcel build ./src/index.html --public-url . --no-cache --log-level 2",
     "deploy": "npm run build && gh-pages -d dist",
-    "deploy:travis": "npm run build && gh-pages --repo https://$GH_TOKEN@github.com/edm00se/modernize-ng1.git -d dist -t",
+    "deploy:travis": "npm run build:travis && gh-pages --repo https://$GH_TOKEN@github.com/edm00se/modernize-ng1.git -d dist -t",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

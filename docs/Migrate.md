@@ -28,10 +28,10 @@ The other main dependencies are all quite straightforward. I invite you to look 
 
 Development dependencies of note:
 
-- `parcel-bundler`
-- babel
-  - babel comes with parcel, but it's here to be explicit for configured environments and plugins
-  - the env and stage-2 presets
+- [`parcel-bundler`][parcel-main], where the magic happens
+- babel (at a minimum, the [`.babelrc`](../.babelrc) and any plugins)
+  - babel comes with parcel, but it's listed here to be explicit for the configured environments and plugins
+  - the env and stage-2 presets, again parcel comes with babel's env preset, but since I'm (optionally) adding stage-2 and the ng-annotate plugin, I erred on the side of being explicit
   - the plugins needed are syntax-decorators and [ng-annotate][npm-babel-plugin-ng-annotate] (which requires the syntax decorators babel plugin)
     - the ng-annotate babel plugin does some automagic handling to allow for smarter minification/uglification of the source JavaScript, a la ng-annotate
     - to see an example of how this works out, check out [the ng-annotate babel plugin in action][ng-annotate-plguin-in-action]
@@ -40,16 +40,16 @@ Development dependencies of note:
 
 ### Font Awesome
 
-There's a special exception for Font Awesome. It currently doesn't play nicely with Parcel. Here are the two links for the respective GitHub Issues:
+There's a special exception for Font Awesome and possibly other icon fonts. It currently doesn't play nicely with Parcel, here are the two links for the respective GitHub Issues:
 
 - [Font Awesome 4 (\#763)][parcel-issue-fa-4]
 - [Font Awesome 5 (\#764)][parcel-issue-fa-5]
 
-My attempts to get something working, such as importing in `main.scss` or `link` tag in `index.html` pointing to the lib in `node_modules`, proved fruitless. The current solutuion I have is to load it from CDN.
+My attempts to get something working, such as importing in [`main.scss`](../src/main.scss) or `link` tag in [`index.html`](../src/index.html) pointing to the lib in `node_modules`, proved fruitless. The current solutuion I have is to load it from CDN.
 
 ### Babel Configuration
 
-This is where the most actual configuration occurs. This has to do with the need to wire up the babel plugin of ng-annotate. The `.babelrc`, with snipped out target browsers, looks like this:
+This is where the most actual configuration occurs. This has to do with the need to wire up the babel plugin of ng-annotate. The [`.babelrc`](../.babelrc), with snipped out target browsers, looks like this:
 
 ```
 {
@@ -86,7 +86,7 @@ This application includes a couple more, and does not directly reference the `ma
 
 #### JavaScript
 
-Similarly, in `main.js`, which is the only directly mentioned `script` tag with `src` now in the `index.html` file, we'll `import` our vendor libraries, then our application files, and the `main.scss` file. Here's what the majority of the file reads like:
+Similarly, in [`main.js`](../src/main.js), which is the only directly mentioned `script` tag with `src` now in the [`index.html`](../src/index.html) file, we'll `import` our vendor libraries, then our application files, and the `main.scss` file. Here's what the majority of the file reads like:
 
 ```javascript
 // libs
@@ -126,7 +126,7 @@ Parcel currently has [an issue importing html from js][parcel-issue-html-from-js
 
 The solution implemented here was to make use of the fact that parcel runs with a node context. As [the assets page of the parcel documentaton][parcel-docs-assets] states, we can make use of `fs.readFileSync`. Note this must be the synchronous method, and it can only use variables of `__dirname` or `__filename`. Encapsulating some of your partial loading logic into a utility library is tempting, but it didn't work out for me, as any other such variable inclusion meant that parcel would cite an inability to statically analyze the code. So, sticking with loading your app routes in a router file and just prefixing each line with a well formed path is the way to go. Make sure to use the second argument of `utf8`, so as to return a string and not a buffer; also note that the path is relative to the project root.
 
-Example, with ui-router:
+[Example, with ui-router](../src/js/app.js):
 
 ```javascript
 $stateProvider
@@ -142,7 +142,7 @@ For a closer look, feel free to check out these examples on code sandbox:
 
 ### ngMessages
 
-This application makes use of [a shared error message template, via ngMessages][ng-messages-template]. The ngMessages implementation suffers the same issue encountered in the router. Without being able to pass a string literal, converting the HTML partial into a script tag with `type="text/ng-template"` was the way to go.
+This application makes use of [a shared error message template, via ngMessages][ng-messages-template]. The ngMessages implementation suffers the same issue encountered in the router. Without being able to pass a string literal, converting the HTML partial into a script tag with `type="text/ng-template"` was the way to go; parked at the bottom of the [`index.html`](../src/index.html).
 
 ```html
 <script type="text/ng-template" id="generic-error-messages">
@@ -154,10 +154,11 @@ This application makes use of [a shared error message template, via ngMessages][
 </script>
 ```
 
-## Found Anything Else?
+## Have You Found Anything Else?
 
 Feel free to reach out if there's something more that's unaccounted for. [Open an Issue][open-issue] or [submit a Pull Request][open-pr].
 
+[parcel-main]: https://parceljs.org/
 [bower]: https://bower.io/
 [npm]: https://www.npmjs.com/
 [parcel-issue-fa-4]: https://github.com/parcel-bundler/parcel/issues/763

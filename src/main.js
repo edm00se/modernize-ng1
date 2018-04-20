@@ -1,5 +1,4 @@
 // libs
-
 import 'angular';
 import 'angular-sanitize';
 import 'angular-messages';

@@ -29,10 +29,10 @@ The other main dependencies are all quite straightforward. I invite you to look 
 Development dependencies of note:
 
 - [`parcel-bundler`][parcel-main], where the magic happens
-- babel (at a minimum, the [`.babelrc`](../.babelrc) and any plugins)
-  - babel comes with parcel, but it's listed here to be explicit for the configured environments and plugins
-  - the env and stage-2 presets, again parcel comes with babel's env preset, but since I'm (optionally) adding stage-2 and the ng-annotate plugin, I erred on the side of being explicit
-  - the plugins needed are syntax-decorators and [ng-annotate][npm-babel-plugin-ng-annotate] (which requires the syntax decorators babel plugin)
+- babel configuration, the [`.babelrc`](../.babelrc)
+  - babel comes with parcel, you'll note the [`package.json`](../package.json) only lists the things I'm adding
+  - the env and stage-2 presets, again parcel comes with babel's env preset, but since I'm (optionally) adding stage-2 and the ng-annotate plugin
+  - the plugins needed are [ng-annotate][npm-babel-plugin-ng-annotate] (which requires the syntax decorators babel plugin)
     - the ng-annotate babel plugin does some automagic handling to allow for smarter minification/uglification of the source JavaScript, a la ng-annotate
     - to see an example of how this works out, check out [the ng-annotate babel plugin in action][ng-annotate-plguin-in-action]
 - [node-sass for scss compilation][parcel-sass]

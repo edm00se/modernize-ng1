@@ -1,15 +1,33 @@
-# Modernize AngularJS 1.x With a Bundler
+TL;DR: You can make an AngularJS 1.x app suck _a lot less_, with ES6+, SCSS, and a local development server, courtesy of Parcel.
 
-This is an attempt to parse down the work needed to get an AngularJS 1.x application to work with a modern bundler. The intention is to migrate a production app, but first, baby steps are needed
+# Modernize AngularJS 1.x With [Parcel][parcel]
 
-## NOTE:
+This is an attempt to parse down the work needed to get an AngularJS 1.x application to work with a modern bundler. The intention is to migrate a production app, but first, baby steps are needed. This is a take on a non-trivial (demo) app I had used previously.
 
-I currently don't expect this to work with Parcel (my leading favorite)... at least as things are _today_. Parcel (and contributors) look to be addressing things such as dealing with older vendor libs (old versions of jQuery for instance), web fonts (like Font Awesome), and more. I fully expect this will work one day, it's just not today.
-
-I took an older Angular 1.x demo app, imported it into a fork of this repo on codesandbox.io, and attempted to get things working. Some things work better than expected, such as Bootstrap 3.x's CSS being applied, some things don't at all, like Font Awesome, ui-router with the separate html partials, and I'm guessing more.
+I got this to work with Parcel! Some fiddling was required, but it's not terrible Parcel (and contributors) look to be addressing things such as dealing with older vendor libs (old versions of jQuery for instance), web fonts (like Font Awesome), and more. I fully expect this will work perfectly out of the box one day, it's just not today. Until then, I'll try and outline what's required to make things work.
 
 For those curious, here's the project on codesandbox:
 https://codesandbox.io/s/8yqrnoz5pl
+
+## The Benefits
+
+Sadly, we can't all dictate when management will/may/someday sign off on modernizing an application. Since even the "closest" jump from AngularJS 1.x to Angular (>=2) is still effectively a complete rewrite of the application, it may not be as easy to get buy-in. So short of jumping entirely into a rewrite, we could take a few steps and modernize an AngularJS 1.x application, and get a lot of modern development benefits, with little configuration, such as:
+
+- ES2015+ (ES6+) support (babel)
+- automatic browser back-support (babel)
+- bundled assets for more performant production applications (parcel)
+- easy inclusion of SCSS (or other pre-processing to CSS) (parcel + node-sass)
+- development server (built into parcel)
+
+The bottom line is: **if you're stuck on an AngularJS 1.x application, you can at least have some of the modern toys and make it suck a lot less**.
+
+## How Hard Is It?
+
+Surprisingly easy, since most of the tooling comes "out of the box" with parcel; development server, babel, and more. Some additional configuration is required, due to the comparatively antequated nature of AngularJS 1.x in this day and age. My assessment, not very hard, and I've found most of the edge configuration needs, so that others needn't go through the same.
+
+## [Migration Guide][migrate-guide]
+
+Read this guide for the steps I took to get things up and running.
 
 ## Installation
 
@@ -18,11 +36,8 @@ https://codesandbox.io/s/8yqrnoz5pl
 
 ## Usage
 
-- `npm run dev` executes `parcel` (the default `serve` command)
-- `npm run build executes `parcel build` with the `--public-url` flag set to `./`, so as to preserve path relative, works by just serving the contents of the `dist/` output directory
-- `TODO:` automagically use `ng-annotate` (or similar tool) to process the source files and scrub correctly, as 
-the 
-initial commit's version of things didn't work correctly when a dep was missing (the only one)
+- `npm run dev` executes `parcel` (with the default `serve` command, for a development server with [HMR][parcel-hmr])
+- `npm run build executes `parcel build`, built into the project's `dist` path
 
 ## History
 
@@ -30,9 +45,14 @@ AngularJS 1.x had its run. Some pretty good applications were built with it, als
 
 ## Credits
 
-- [Parcel](https://parceljs.org/)
-- [AngularJS](https://angularjs.org/)
+- [Parcel][parcel]
+- [AngularJS][angularjs]
 
 ## License
 
 MIT
+
+[migrate-guide]: docs/Migrate.md
+[parcel]: https://parceljs.org/
+[parcel-hmr]: https://parceljs.org/hmr.html
+[angularjs]: https://angularjs.org/

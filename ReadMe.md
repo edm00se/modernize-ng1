@@ -38,7 +38,7 @@ Read this guide for the steps I took to get things up and running.
 ## Usage
 
 - `npm run dev` executes `parcel` (with the default `serve` command, for a development server with [HMR][parcel-hmr])
-- `npm run build executes `parcel build`, built into the project's `dist` path
+- `npm run build` executes `parcel build`, built into the project's `dist` path
 
 ## History
 

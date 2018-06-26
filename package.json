@@ -17,9 +17,9 @@
   "license": "MIT",
   "dependencies": {
     "@uirouter/angularjs": "1.0.16",
-    "angular": "1.6.10",
-    "angular-messages": "1.6.10",
-    "angular-sanitize": "1.6.10",
+    "angular": "1.7.2",
+    "angular-messages": "1.7.2",
+    "angular-sanitize": "1.7.2",
     "bootstrap": "3.3.7",
     "bootswatch": "3.3.7",
     "font-awesome": "4.7.0",
@@ -30,7 +30,7 @@
     "babel-plugin-ng-annotate": "0.3.2",
     "babel-plugin-syntax-decorators": "6.13.0",
     "babel-preset-stage-2": "6.24.1",
-    "gh-pages": "1.1.0",
+    "gh-pages": "1.2.0",
     "node-sass": "4.9.0",
     "parcel-bundler": "1.9.3",
     "rimraf": "2.6.2"

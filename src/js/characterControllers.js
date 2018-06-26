@@ -269,7 +269,7 @@ angular
       };
 
       $scope.$on('$locationChangeStart', function(event) {
-        if ($scope.form.$dirty && !confirm('Abandon unsaved changes?')) {
+        if ($scope.characterForm.$dirty && !confirm('Abandon unsaved changes?')) {
           event.preventDefault();
         }
       });

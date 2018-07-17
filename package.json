@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "clean": "rimraf dist",
-    "dev": "parcel ./src/index.html --no-cache --open",
+    "dev": "parcel ./src/index.html --no-cache",
     "build": "parcel build ./src/index.html --public-url . --no-cache",
     "build:travis": "parcel build ./src/index.html --public-url . --no-cache --log-level 2",
     "deploy": "npm run build && gh-pages -d dist",

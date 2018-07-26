@@ -16,7 +16,7 @@
   "author": "Eric McCormick (https://ericmccormick.io/)",
   "license": "MIT",
   "dependencies": {
-    "@uirouter/angularjs": "1.0.16",
+    "@uirouter/angularjs": "1.0.19",
     "angular": "1.7.2",
     "angular-messages": "1.7.2",
     "angular-sanitize": "1.7.2",

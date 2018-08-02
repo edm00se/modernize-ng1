@@ -22,7 +22,7 @@ The application will need to be "ingested" to its new format. For this applicati
 
 For this application, the dependencies were migrated from [bower][bower] to [npm][npm]. This required verifying that each name would resolve to the correct package, the correct version, and that an `npm install <package>` would yield the correct files. None of those things were generally a problem, and I found that I was more likely to spend time ensuring that I included a minor upgrade to the dependencies during the process.
 
-On that note, the largest dependency jump, aside from upgrading an Angular 1.5 application to the latest stable of 1.6(.9), was that I wound up upgrading jQuery (for Bootstrap 3.x) from 2.x to 3.x; Bootstrap 3.3.7 supports jQuery 3.
+On that note, the largest dependency jump, aside from upgrading an Angular 1.5 application to the latest stable of 1.7(.2), was that I wound up upgrading jQuery (for Bootstrap 3.x) from 2.x to 3.x; Bootstrap 3.3.7 supports jQuery 3.
 
 The other main dependencies are all quite straightforward. I invite you to look through the `package.json`.
 

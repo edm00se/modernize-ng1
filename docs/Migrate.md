@@ -40,12 +40,12 @@ Development dependencies of note:
 
 ### Font Awesome
 
-There's a special exception for Font Awesome and possibly other icon fonts. It currently doesn't play nicely with Parcel, here are the two links for the respective GitHub Issues:
+There's a special exception for Font Awesome and possibly other icon fonts. It previously didn't play nicely with Parcel, here are the two links for the respective GitHub Issues:
 
 - [Font Awesome 4 (\#763)][parcel-issue-fa-4]
 - [Font Awesome 5 (\#764)][parcel-issue-fa-5]
 
-My attempts to get something working, such as importing in [`main.scss`](../src/main.scss) or `link` tag in [`index.html`](../src/index.html) pointing to the lib in `node_modules`, proved fruitless. The current solutuion I have is to load it from CDN.
+I'm currently able to import it into `main.scss` via an `@import url('../node_modules/...path...to/font-awesome.min.css');`. Alternatively it could be linked to (from relative node_modules path), in a `link` tag in `index.html`.
 
 ### Babel Configuration
 
@@ -78,11 +78,11 @@ Since the project is changing over to use dependencies from npm, the `index.html
 Using a path relative declaration in the `link` tags in the head of the file is a pretty easy way of managing library inclusion. It looks like so:
 
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- I'm not doing this anymore, as I can import in the main.scss file (including font awesome), but it is possible and functional. -->
 <link rel="stylesheet" href="../node_modules/bootswatch/flatly/bootstrap.min.css">
 ```
 
-This application includes a couple more, and does not directly reference the `main.scss` file here, that's handled in the main entrypoint for the JavaScript. These will be rolled up together when parcel builds its files.
+This application does not directly reference the `main.scss` file here, that's handled in the main entrypoint for the JavaScript. These will be rolled up together when parcel builds its files.
 
 #### JavaScript
 
@@ -114,6 +114,7 @@ import './main.scss';
 Loading jQuery and the Bootstrap plugins gets a little silly, to ensure it's in the appropriate name space, but this is what it looks like:
 
 ```javascript
+// funky libs, `import` statements before `require` statements
 const $ = require('jquery');
 window.$ = $;
 window.jQuery = $;

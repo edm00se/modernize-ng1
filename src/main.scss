@@ -1,10 +1,4 @@
-/*
- * temporarily going with a CDN solution for Font Awesome
- * as this is a known issue w/ Font Awesome 4.x and Parcel
- * ref: https://github.com/parcel-bundler/parcel/issues/763
- */
-// $fa-font-path: '~font-awesome/fonts';
-// @import '~font-awesome/scss/font-awesome.scss';
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
 @import url('../node_modules/bootswatch/flatly/bootstrap.min.css');
 @import url('../node_modules/ng-tags-input/build/ng-tags-input.min.css');
 @import url('../node_modules/ng-tags-input/build/ng-tags-input.bootstrap.min.css');

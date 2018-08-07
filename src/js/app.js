@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 //defines the AngularJS app as a module
 angular
   .module('westerosiApp', [
@@ -18,36 +16,36 @@ angular
       $stateProvider
         .state('about', {
           url: '/about',
-          template: fs.readFileSync('./src/partials/about.html', 'utf8')
+          template: require('../partials/about.html')
         })
         .state('houses', {
           url: '/houses',
-          template: fs.readFileSync('./src/partials/houseList.html', 'utf8'),
+          template: require('../partials/houseList.html'),
           controller: 'HouseListCtrl'
         })
         .state('newHouse', {
           url: '/newHouse',
-          template: fs.readFileSync('./src/partials/house.html', 'utf8'),
+          template: require('../partials/house.html'),
           controller: 'NewHouseCtrl'
         })
         .state('houses.item', {
           url: '/:item',
-          template: fs.readFileSync('./src/partials/house.html', 'utf8'),
+          template: require('../partials/house.html'),
           controller: 'OneHouseCtrl'
         })
         .state('characters', {
           url: '/characters',
-          template: fs.readFileSync('./src/partials/characterList.html', 'utf8'),
+          template: require('../partials/characterList.html'),
           controller: 'CharacterListCtrl'
         })
         .state('newCharacter', {
           url: '/newCharacter',
-          template: fs.readFileSync('./src/partials/character.html', 'utf8'),
+          template: require('../partials/character.html'),
           controller: 'NewCharacterCtrl'
         })
         .state('characters.item', {
           url: '/:item',
-          template: fs.readFileSync('./src/partials/character.html', 'utf8'),
+          template: require('../partials/character.html'),
           controller: 'OneCharacterCtrl'
         });
     }

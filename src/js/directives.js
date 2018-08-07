@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 //defines the AngularJS app as a module
 angular
   .module('westerosiApp')
@@ -12,7 +10,7 @@ angular
   .directive('navBar', function() {
     return {
       restrict: 'E',
-      template: fs.readFileSync('./src/partials/nav.html', 'utf8'),
+      template: require('../partials/nav.html'),
       controller: ["$scope", "$location", function($scope, $location) {
         $scope.isActive = function(route) {
           return route === $location.path();

@@ -2,6 +2,7 @@
 import 'angular';
 import 'angular-sanitize';
 import 'angular-messages';
+import 'angular-aria';
 import '@uirouter/angularjs';
 import 'ng-tags-input';
 

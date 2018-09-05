@@ -3,6 +3,7 @@ const fs = require('fs');
 //defines the AngularJS app as a module
 angular
   .module('westerosiApp', [
+    'ngAria',
     'ui.router',
     'ngTagsInput',
     'ngMessages' //'ngAnimate'
@@ -12,7 +13,13 @@ angular
   .config([
     '$stateProvider',
     '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
+    '$ariaProvider',
+    function($stateProvider, $urlRouterProvider, $ariaProvider) {
+      $ariaProvider.config({
+        ariaValue: true,
+        tabindex: false
+      });
+
       $urlRouterProvider.otherwise('/about');
 
       $stateProvider
@@ -37,7 +44,10 @@ angular
         })
         .state('characters', {
           url: '/characters',
-          template: fs.readFileSync('./src/partials/characterList.html', 'utf8'),
+          template: fs.readFileSync(
+            './src/partials/characterList.html',
+            'utf8'
+          ),
           controller: 'CharacterListCtrl'
         })
         .state('newCharacter', {

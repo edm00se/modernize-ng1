@@ -125,7 +125,7 @@ require('bootstrap');
 
 Parcel currently has [an issue importing html from js][parcel-issue-html-from-js]. This specifically becomes [a problem for AngularJS 1.x applications][parcel-issue-angular-router], regardless of whether you use [ngRoute][ng-route] or [ui-router][ui-router], if you make use of `templateUrl` with an html mpartial.
 
-The solution implemented here was to make use of the fact that parcel runs with a node context. As [the assets page of the parcel documentaton][parcel-docs-assets] states, we can make use of `fs.readFileSync`. Note this must be the synchronous method, and it can only use variables of `__dirname` or `__filename`. Encapsulating some of your partial loading logic into a utility library is tempting, but it didn't work out for me, as any other such variable inclusion meant that parcel would cite an inability to statically analyze the code. So, sticking with loading your app routes in a router file and just prefixing each line with a well formed path is the way to go. Make sure to use the second argument of `utf8`, so as to return a string and not a buffer; also note that the path is relative to the project root.
+The solution implemented here was to make use of the fact that parcel runs with a node context. As [the assets page of the parcel documentaton][parcel-docs-assets] states, we can make use of `require`.
 
 [Example, with ui-router](../src/js/app.js):
 
@@ -133,7 +133,7 @@ The solution implemented here was to make use of the fact that parcel runs with 
 $stateProvider
   .state('about', {
     url: '/about',
-    template: fs.readFileSync('./src/partials/about.html', 'utf8')
+    template: require('./src/partials/about.html')
   })
 ```
 

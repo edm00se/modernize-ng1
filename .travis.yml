@@ -4,7 +4,10 @@ cache:
     - "node_modules"
 node_js:
   - lts/*
+notifications:
+  email: false
 branches:
-  only: master
-script:
+  only:
+  - master
+after_success:
   - npm run deploy:travis

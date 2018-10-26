@@ -1,7 +1,7 @@
 TL;DR: You can make an AngularJS 1.x app suck _a lot less_, with ES6+, SCSS, and a local development server, courtesy of Parcel.
 
 # Modernize AngularJS 1.x With [Parcel][parcel]
-[![Build Status](https://travis-ci.org/edm00se/modernize-ng1.svg?branch=master)](https://travis-ci.org/edm00se/modernize-ng1) [![Dependency Status](https://tidelift.com/badges/github/edm00se/modernize-ng1?style=flat)](https://tidelift.com/repo/github/edm00se/modernize-ng1/) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/50468ad8eb784493a31064b528bd0e6d)](https://www.codacy.com/app/edm00se/modernize-ng1?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=edm00se/modernize-ng1&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/edm00se/modernize-ng1.svg?branch=master)](https://travis-ci.org/edm00se/modernize-ng1) [![dependencies status](https://david-dm.org/edm00se/modernize-ng1/status.svg)](https://david-dm.org/edm00se/modernize-ng1) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/50468ad8eb784493a31064b528bd0e6d)](https://www.codacy.com/app/edm00se/modernize-ng1?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=edm00se/modernize-ng1&amp;utm_campaign=Badge_Grade)
 
 This is an attempt to parse down the work needed to get an AngularJS 1.x application to work with a modern bundler. The intention is to migrate a production app, but first, baby steps are needed. This is a take on a non-trivial (demo) app I had used previously.
 

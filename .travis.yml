@@ -9,5 +9,5 @@ notifications:
 branches:
   only:
   - master
-after_success:
+script:
   - npm run deploy:travis

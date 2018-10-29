@@ -264,6 +264,6 @@ var r=require("./bundle-url").getBundleURL;function e(r){Array.isArray(r)||(r=[r
 },{"./bundle-url":"3Fhe"}],"A3BY":[function(require,module,exports) {
 module.exports=function(t){return fetch(t).then(function(t){return t.text()})};
 },{}],0:[function(require,module,exports) {
-var b=require("21/1");b.register("html",require("A3BY"));b.load([["about.41fe6885.html","rQpp"],["houseList.d1750686.html","t/ca"],["house.4753fcb5.html","HcV2"],["characterList.7b987e50.html","b7Nu"],["character.f17a6ac2.html","LwSE"],["nav.e19ae89a.html","hp2c"]]).then(function(){require("epB2");});
+var b=require("21/1");b.register("html",require("A3BY"));b.load([["about.3bb6f0bb.html","rQpp"],["houseList.d1750686.html","t/ca"],["house.4753fcb5.html","HcV2"],["characterList.7b987e50.html","b7Nu"],["character.f17a6ac2.html","LwSE"],["nav.e19ae89a.html","hp2c"]]).then(function(){require("epB2");});
 },{}]},{},[0], null)
 //# sourceMappingURL=main.36025d4f.map

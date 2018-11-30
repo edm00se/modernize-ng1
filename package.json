@@ -7,6 +7,7 @@
     "clean": "rimraf dist",
     "dev": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html --public-url .",
+    "build:sw": "rimraf dist/sw.js && workbox generateSW config/workbox-config.js",
     "build:travis": "parcel build ./src/index.html --public-url . --log-level 2",
     "deploy": "npm run build && gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -34,6 +35,7 @@
     "babel-preset-stage-2": "6.24.1",
     "node-sass": "4.9.4",
     "parcel-bundler": "1.10.3",
-    "rimraf": "2.6.2"
+    "rimraf": "2.6.2",
+    "workbox-cli": "3.6.3"
   }
 }

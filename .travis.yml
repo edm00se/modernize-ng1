@@ -11,6 +11,7 @@ branches:
   - master
 script:
   - npm run build:travis
+  - npm run build:sw
 deploy:
   provider: pages
   local-dir: dist

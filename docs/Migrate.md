@@ -138,10 +138,15 @@ $stateProvider
 ```
 
 For a closer look, feel free to check out these examples on code sandbox:
+
 - [ngRoute][ng-router-example]
 - [ui-router][ui-router-example]
 
-### ngMessages
+### Included Partials
+
+There are some minor nuances with dealing with `ng-include` directives. These are exemplified below in the `ngMessages` section.
+
+#### ngMessages
 
 This application makes use of [a shared error message template, via ngMessages][ng-messages-template]. The ngMessages implementation suffers the same issue encountered in the router. Without being able to pass a string literal, converting the HTML partial into a script tag with `type="text/ng-template"` was the way to go; parked at the bottom of the [`index.html`](../src/index.html).
 
@@ -155,7 +160,35 @@ This application makes use of [a shared error message template, via ngMessages][
 </script>
 ```
 
-## Have You Found Anything Else?
+#### Using PostHTML
+
+You can alternatively use PostHTML to perform the a similar solution. This approach is implemented in HTML source as such:
+
+```html
+<include src="project/relative/path/to/some.html"></include>
+```
+
+If you have conditional visibility logic, you'll want to wrap that `<include>` tag with a `div` or `span` with an `ng-if` or `ng-show` directive.
+
+To start using this approach:
+
+1. install the dependency, `npm install --save-dev posthtml-include`
+2. create the posthtml config file
+
+```js
+// .posthtmlrc.js
+module.exports = {
+  plugins: [
+    require('posthtml-include')({
+      root: './src'
+    })
+  ]
+};
+```
+
+## Contribute What You've Found
+
+Have You Found Anything Else?
 
 Feel free to reach out if there's something more that's unaccounted for. [Open an Issue][open-issue] or [submit a Pull Request][open-pr].
 

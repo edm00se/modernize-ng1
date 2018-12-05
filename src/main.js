@@ -1,3 +1,5 @@
+require("babel-polyfill");
+
 // libs
 import 'angular';
 import 'angular-sanitize';

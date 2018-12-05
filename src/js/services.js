@@ -4,8 +4,8 @@
     .module('westerosiApp')
 
     /*
-	 *	Factories
-	 */
+     *	Factories
+     */
 
     //defines the $HTTP factory, one of the 3 service types
     .factory('houseCollectionFactory', [
@@ -95,7 +95,7 @@
     .factory('abilitiesTagFactory', [
       '$http',
       '$q',
-      function($http,$q) {
+      function($http, $q) {
         // return $http.get('/tags/abilities.json');
         return $q((resolve, reject) => {
           const mock = require('../mocks/abilities.json');

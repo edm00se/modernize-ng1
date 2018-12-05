@@ -6,11 +6,13 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "parcel ./src/index.html",
+    "format": "prettier --write \"src/**/*.{js,json}\"",
     "build": "parcel build ./src/index.html --public-url .",
     "build:sw": "rimraf dist/sw.js && workbox generateSW config/workbox-config.js",
     "build:travis": "parcel build ./src/index.html --public-url . --log-level 2",
     "deploy": "npm run build && gh-pages -d dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config config/tests/jest.conf.js",
+    "test:watch": "npm test -- --watch"
   },
   "keywords": [],
   "author": "Eric McCormick (https://edm00se.codes/)",
@@ -28,13 +30,17 @@
     "ng-tags-input": "3.2.0"
   },
   "devDependencies": {
+    "angular-mocks": "1.7.5",
     "babel-core": "6.26.3",
+    "babel-jest": "23.6.0",
     "babel-plugin-ng-annotate": "0.3.2",
     "babel-plugin-syntax-decorators": "6.13.0",
     "babel-preset-env": "1.7.0",
     "babel-preset-stage-2": "6.24.1",
+    "jest": "23.6.0",
     "node-sass": "4.9.4",
     "parcel-bundler": "1.10.3",
+    "prettier": "1.15.3",
     "rimraf": "2.6.2",
     "workbox-cli": "3.6.3"
   }

@@ -3,14 +3,8 @@
     {
       "house": "Stark",
       "charFirstName": "Arya",
-      "abilities": [
-        "Swordplay",
-        "Student of Death"
-      ],
-      "parents": [
-        "Eddard Stark",
-        "Catelyn Tulley"
-      ],
+      "abilities": ["Swordplay", "Student of Death"],
+      "parents": ["Eddard Stark", "Catelyn Tulley"],
       "siblings": [
         "Jon Snow",
         "Robb Stark",
@@ -30,14 +24,8 @@
     {
       "house": "Stark",
       "charFirstName": "Bran",
-      "abilities": [
-        "Cunning",
-        "Skin Changing"
-      ],
-      "parents": [
-        "Eddard Stark",
-        "Catelyn Tulley"
-      ],
+      "abilities": ["Cunning", "Skin Changing"],
+      "parents": ["Eddard Stark", "Catelyn Tulley"],
       "siblings": [
         "Jon Snow",
         "Robb Stark",
@@ -57,9 +45,7 @@
     {
       "house": "Lannister",
       "charFirstName": "Bronn",
-      "abilities": [
-        "Swordplay"
-      ],
+      "abilities": ["Swordplay"],
       "parents": [],
       "siblings": [],
       "actLastName": "Flynn",
@@ -74,17 +60,9 @@
     {
       "house": "Tully",
       "charFirstName": "Catelyn",
-      "abilities": [
-        "Allegience"
-      ],
-      "parents": [
-        "Hoster Tully",
-        "Minisa Whent"
-      ],
-      "siblings": [
-        "Edmure Tully",
-        "Lysa Tully"
-      ],
+      "abilities": ["Allegience"],
+      "parents": ["Hoster Tully", "Minisa Whent"],
+      "siblings": ["Edmure Tully", "Lysa Tully"],
       "actLastName": "Fairley",
       "unid": "A1AB6136055CEAD188257E86005FE47A",
       "spouse": "Eddard Stark",
@@ -103,18 +81,9 @@
     {
       "house": "Lannister",
       "charFirstName": "Cersei",
-      "abilities": [
-        "Cunning",
-        "Conspiracy"
-      ],
-      "parents": [
-        "Tywin",
-        "Joanna"
-      ],
-      "siblings": [
-        "Jaime",
-        "Tyrion"
-      ],
+      "abilities": ["Cunning", "Conspiracy"],
+      "parents": ["Tywin", "Joanna"],
+      "siblings": ["Jaime", "Tyrion"],
       "actLastName": "Headey",
       "unid": "1DDC8947E623F6FF88257E86005FE477",
       "spouse": "Robert Baratheon",
@@ -122,29 +91,14 @@
       "title": "Queen",
       "actFirstName": "Lena",
       "home": "Red Keep",
-      "children": [
-        "Joffrey",
-        "Myrcella",
-        "Tommen"
-      ]
+      "children": ["Joffrey", "Myrcella", "Tommen"]
     },
     {
       "house": "Targaryen",
       "charFirstName": "Daenerys",
-      "abilities": [
-        "Cunning",
-        "Compassion",
-        "Wisdom",
-        "Dragons"
-      ],
-      "parents": [
-        "Aerys",
-        "Rhaella"
-      ],
-      "siblings": [
-        "Rhaegar",
-        "Viserys"
-      ],
+      "abilities": ["Cunning", "Compassion", "Wisdom", "Dragons"],
+      "parents": ["Aerys", "Rhaella"],
+      "siblings": ["Rhaegar", "Viserys"],
       "actLastName": "Clark",
       "unid": "635FC0A69895FAED88257E86005FE47D",
       "spouse": "Drogo  ",
@@ -152,20 +106,12 @@
       "title": "Princess",
       "actFirstName": "Emilia",
       "home": "Westeros",
-      "children": [
-        "Viserion",
-        "Rhaegal",
-        "Drogon"
-      ]
+      "children": ["Viserion", "Rhaegal", "Drogon"]
     },
     {
       "house": "Baratheon",
       "charFirstName": "Davos",
-      "abilities": [
-        "Seafaring",
-        "Cunning",
-        "Battle"
-      ],
+      "abilities": ["Seafaring", "Cunning", "Battle"],
       "parents": [],
       "siblings": [],
       "actLastName": "Cunningham",
@@ -188,9 +134,7 @@
     {
       "house": "Targaryen",
       "charFirstName": "Doreah",
-      "abilities": [
-        ""
-      ],
+      "abilities": [""],
       "parents": [],
       "siblings": [],
       "actLastName": "McKee",
@@ -205,11 +149,7 @@
     {
       "house": "Other",
       "charFirstName": "Drogo",
-      "abilities": [
-        "Horse Riding",
-        "Command",
-        "Swordplay"
-      ],
+      "abilities": ["Horse Riding", "Command", "Swordplay"],
       "parents": [],
       "siblings": [],
       "actLastName": "Momoa",
@@ -224,18 +164,9 @@
     {
       "house": "Stark",
       "charFirstName": "Eddard",
-      "abilities": [
-        "Swordplay",
-        "Wisdom",
-        "Warfare",
-        "Rule"
-      ],
+      "abilities": ["Swordplay", "Wisdom", "Warfare", "Rule"],
       "parents": "Rickard Stark",
-      "siblings": [
-        "Brandon Stark",
-        "Benjen Stark",
-        "Lyanna Stark"
-      ],
+      "siblings": ["Brandon Stark", "Benjen Stark", "Lyanna Stark"],
       "actLastName": "Bean",
       "unid": "19515D6FEEBC13FC88257E86005FE48D",
       "spouse": "Catelyn Tully",
@@ -255,9 +186,7 @@
     {
       "house": "Other",
       "charFirstName": "Gendry",
-      "abilities": [
-        "Smith"
-      ],
+      "abilities": ["Smith"],
       "parents": "Robert Baratheon",
       "siblings": "countless bastards",
       "actLastName": "",
@@ -272,10 +201,7 @@
     {
       "house": "Stark",
       "charFirstName": "Hodor",
-      "abilities": [
-        "Strength",
-        "Loyalty"
-      ],
+      "abilities": ["Strength", "Loyalty"],
       "parents": [],
       "siblings": [],
       "actLastName": "Naim",
@@ -290,10 +216,7 @@
     {
       "house": "Baratheon",
       "charFirstName": "Ilyn",
-      "abilities": [
-        "Swordplay",
-        "Death"
-      ],
+      "abilities": ["Swordplay", "Death"],
       "parents": [],
       "siblings": [],
       "actLastName": "Johnson",
@@ -308,9 +231,7 @@
     {
       "house": "Targaryen",
       "charFirstName": "Irri",
-      "abilities": [
-        "Language"
-      ],
+      "abilities": ["Language"],
       "parents": [],
       "siblings": [],
       "actLastName": "Acharia",
@@ -325,18 +246,9 @@
     {
       "house": "KingsGuard",
       "charFirstName": "Jaime",
-      "abilities": [
-        "Swordsmanship",
-        "Combat"
-      ],
-      "parents": [
-        "Tywin",
-        "Joanna"
-      ],
-      "siblings": [
-        "Cersei",
-        "Tyrion"
-      ],
+      "abilities": ["Swordsmanship", "Combat"],
+      "parents": ["Tywin", "Joanna"],
+      "siblings": ["Cersei", "Tyrion"],
       "actLastName": "Coster-Waldau",
       "unid": "7C00EBDDF065C1A088257E86005FE463",
       "spouse": "",
@@ -353,11 +265,7 @@
     {
       "house": "NightsWatch",
       "charFirstName": "Jeor",
-      "abilities": [
-        "Swordplay",
-        "Command",
-        "Warfare"
-      ],
+      "abilities": ["Swordplay", "Command", "Warfare"],
       "parents": [],
       "siblings": [],
       "actLastName": "Cosmo",
@@ -372,9 +280,7 @@
     {
       "house": "Targaryen",
       "charFirstName": "Jhiqui",
-      "abilities": [
-        "Language"
-      ],
+      "abilities": ["Language"],
       "parents": [],
       "siblings": [],
       "actLastName": "Piotrowski",
@@ -389,18 +295,9 @@
     {
       "house": "Lannister",
       "charFirstName": "Joffrey",
-      "abilities": [
-        "Cunning",
-        "Brutality"
-      ],
-      "parents": [
-        "Cersei Lannister",
-        "Jaime Lannister"
-      ],
-      "siblings": [
-        "Myrcella Baratheon",
-        "Tommen Baratheon"
-      ],
+      "abilities": ["Cunning", "Brutality"],
+      "parents": ["Cersei Lannister", "Jaime Lannister"],
+      "siblings": ["Myrcella Baratheon", "Tommen Baratheon"],
       "actLastName": "Gleeson",
       "unid": "96F906DD90BC263A88257E86005FE46C",
       "spouse": "Margaery Tyrell",
@@ -413,10 +310,7 @@
     {
       "house": "Arryn",
       "charFirstName": "Jon",
-      "abilities": [
-        "Wisdom",
-        "Warfare"
-      ],
+      "abilities": ["Wisdom", "Warfare"],
       "parents": "Jasper Arryn",
       "siblings": "Ronnel Arryn",
       "actLastName": "",
@@ -426,10 +320,7 @@
       "title": "Defender of the Vale",
       "actFirstName": "",
       "home": "Eyrie",
-      "children": [
-        "Jeyne Royce",
-        "Robert Arryn"
-      ]
+      "children": ["Jeyne Royce", "Robert Arryn"]
     },
     {
       "house": "NightsWatch",
@@ -440,17 +331,8 @@
         "Love of Wildling",
         "Ghost (direwolf)"
       ],
-      "parents": [
-        "Eddard Stark",
-        "Mystery Woman",
-        ""
-      ],
-      "siblings": [
-        "Robb Stark",
-        "Brandon Stark",
-        "Sansa Stark",
-        "Arya Stark"
-      ],
+      "parents": ["Eddard Stark", "Mystery Woman", ""],
+      "siblings": ["Robb Stark", "Brandon Stark", "Sansa Stark", "Arya Stark"],
       "actLastName": "Harington",
       "unid": "9CA232D9B7735DD088257E86005FE45F",
       "spouse": "",
@@ -463,14 +345,8 @@
     {
       "house": "Radical",
       "charFirstName": "Jorah",
-      "abilities": [
-        "Swordfighting",
-        "Warfare"
-      ],
-      "parents": [
-        "Jeor",
-        ""
-      ],
+      "abilities": ["Swordfighting", "Warfare"],
+      "parents": ["Jeor", ""],
       "siblings": [],
       "actLastName": "Glen",
       "unid": "3A2BDA78FC2B91BB88257E86005FE460",
@@ -484,10 +360,7 @@
     {
       "house": "Lannister",
       "charFirstName": "Kevan",
-      "abilities": [
-        "Cunning",
-        ""
-      ],
+      "abilities": ["Cunning", ""],
       "parents": "Tytos Lannister",
       "siblings": [
         "Tywin Lannister",
@@ -512,18 +385,9 @@
     {
       "house": "Lannister",
       "charFirstName": "Lancel",
-      "abilities": [
-        ""
-      ],
-      "parents": [
-        "Kevan Lannister",
-        "Dorna Swyft"
-      ],
-      "siblings": [
-        "Willem Lannister",
-        "Martyn Lannister",
-        "Janei Lannister"
-      ],
+      "abilities": [""],
+      "parents": ["Kevan Lannister", "Dorna Swyft"],
+      "siblings": ["Willem Lannister", "Martyn Lannister", "Janei Lannister"],
       "actLastName": "Simon",
       "unid": "FB459CDA1603E6F088257E86005FE481",
       "spouse": "",
@@ -536,18 +400,9 @@
     {
       "house": "Tyrell",
       "charFirstName": "Loras",
-      "abilities": [
-        "Swordplay"
-      ],
-      "parents": [
-        "Mace Tyrell",
-        "Alerie Hightower"
-      ],
-      "siblings": [
-        "Willas Tyrell",
-        "Garlan Tyrell",
-        "Margaery Tyrell"
-      ],
+      "abilities": ["Swordplay"],
+      "parents": ["Mace Tyrell", "Alerie Hightower"],
+      "siblings": ["Willas Tyrell", "Garlan Tyrell", "Margaery Tyrell"],
       "actLastName": "Jones",
       "unid": "129180D7F656901388257E86005FE486",
       "spouse": "",
@@ -560,13 +415,7 @@
     {
       "house": "Stark",
       "charFirstName": "Luwin",
-      "abilities": [
-        "Science",
-        "Medicine",
-        "Cunning",
-        "Wisdom",
-        "Peace"
-      ],
+      "abilities": ["Science", "Medicine", "Cunning", "Wisdom", "Peace"],
       "parents": [],
       "siblings": [],
       "actLastName": "Sumpter",
@@ -581,17 +430,9 @@
     {
       "house": "Tully",
       "charFirstName": "Lysa",
-      "abilities": [
-        "Cunning"
-      ],
-      "parents": [
-        "Hoster Tully",
-        "Minisa Whent"
-      ],
-      "siblings": [
-        "Edmure Tully",
-        "Catelyn Tully"
-      ],
+      "abilities": ["Cunning"],
+      "parents": ["Hoster Tully", "Minisa Whent"],
+      "siblings": ["Edmure Tully", "Catelyn Tully"],
       "actLastName": "Dickie",
       "unid": "0B17DFE4B127ED5E88257E86005FE472",
       "spouse": "Jon Arryn",
@@ -604,18 +445,9 @@
     {
       "house": "Other",
       "charFirstName": "Margaery",
-      "abilities": [
-        "Cunning"
-      ],
-      "parents": [
-        "Mace Tyrell",
-        "Aleries Hightower"
-      ],
-      "siblings": [
-        "Loras Tyrell",
-        "Garlan Tyrell",
-        "Willas Tyrell"
-      ],
+      "abilities": ["Cunning"],
+      "parents": ["Mace Tyrell", "Aleries Hightower"],
+      "siblings": ["Loras Tyrell", "Garlan Tyrell", "Willas Tyrell"],
       "actLastName": "Dormer",
       "unid": "C362311F4BF0A49C88257E86005FE475",
       "spouse": "Renly Baratheon",
@@ -628,10 +460,7 @@
     {
       "house": "Baratheon",
       "charFirstName": "Melisandre",
-      "abilities": [
-        "Magic",
-        "Shadow Children"
-      ],
+      "abilities": ["Magic", "Shadow Children"],
       "parents": [],
       "siblings": [],
       "actLastName": "van  Houten",
@@ -646,10 +475,7 @@
     {
       "house": "KingsGuard",
       "charFirstName": "Meryn",
-      "abilities": [
-        "Swordplay",
-        "Amorality"
-      ],
+      "abilities": ["Swordplay", "Amorality"],
       "parents": [],
       "siblings": [],
       "actLastName": "Beattie",
@@ -664,18 +490,9 @@
     {
       "house": "Lannister",
       "charFirstName": "Myrcella",
-      "abilities": [
-        "Beauty",
-        "Compassion"
-      ],
-      "parents": [
-        "Cersei Lannister",
-        "Jaime Lannister"
-      ],
-      "siblings": [
-        "Joffrey Baratheon",
-        "Tommen Baratheon"
-      ],
+      "abilities": ["Beauty", "Compassion"],
+      "parents": ["Cersei Lannister", "Jaime Lannister"],
+      "siblings": ["Joffrey Baratheon", "Tommen Baratheon"],
       "actLastName": "Richardson",
       "unid": "6020B787D679D7C488257E86005FE47F",
       "spouse": "",
@@ -688,10 +505,7 @@
     {
       "house": "Wildling",
       "charFirstName": "Osha",
-      "abilities": [
-        "Fighting",
-        "Surviving"
-      ],
+      "abilities": ["Fighting", "Surviving"],
       "parents": [],
       "siblings": [],
       "actLastName": "Tena",
@@ -706,10 +520,7 @@
     {
       "house": "Radical",
       "charFirstName": "Petyr",
-      "abilities": [
-        "Cunning",
-        "Money Handling"
-      ],
+      "abilities": ["Cunning", "Money Handling"],
       "parents": "Alayne",
       "siblings": [],
       "actLastName": "Gillen",
@@ -724,10 +535,7 @@
     {
       "house": "Baratheon",
       "charFirstName": "Pycelle",
-      "abilities": [
-        "Cunning",
-        "Speech"
-      ],
+      "abilities": ["Cunning", "Speech"],
       "parents": [],
       "siblings": [],
       "actLastName": "Glover",
@@ -742,10 +550,7 @@
     {
       "house": "Targaryen",
       "charFirstName": "Rakharo",
-      "abilities": [
-        "Horse riding",
-        "Fighting"
-      ],
+      "abilities": ["Horse riding", "Fighting"],
       "parents": [],
       "siblings": [],
       "actLastName": "Gabel",
@@ -760,18 +565,9 @@
     {
       "house": "Baratheon",
       "charFirstName": "Renly",
-      "abilities": [
-        "Swordplay",
-        "Charm"
-      ],
-      "parents": [
-        "Steffon Baratheon",
-        "Cassana Estermont"
-      ],
-      "siblings": [
-        "Robert Baratheon",
-        "Stannis Baratheon"
-      ],
+      "abilities": ["Swordplay", "Charm"],
+      "parents": ["Steffon Baratheon", "Cassana Estermont"],
+      "siblings": ["Robert Baratheon", "Stannis Baratheon"],
       "actLastName": "Anthony",
       "unid": "C72C773E575DE1B688257E86005FE473",
       "spouse": "Margaery Tyrell",
@@ -784,13 +580,8 @@
     {
       "house": "Stark",
       "charFirstName": "Rickon",
-      "abilities": [
-        ""
-      ],
-      "parents": [
-        "Eddard Stark",
-        "Catelyn Tully"
-      ],
+      "abilities": [""],
+      "parents": ["Eddard Stark", "Catelyn Tully"],
       "siblings": [
         "Jon Snow",
         "Robb Stark",
@@ -810,14 +601,8 @@
     {
       "house": "Stark",
       "charFirstName": "Robb",
-      "abilities": [
-        "Swordplay",
-        "Allegience"
-      ],
-      "parents": [
-        "Eddard Stark",
-        "Catelyn Tulley"
-      ],
+      "abilities": ["Swordplay", "Allegience"],
+      "parents": ["Eddard Stark", "Catelyn Tulley"],
       "siblings": [
         "Jon Snow",
         "Sansa Stark",
@@ -837,19 +622,9 @@
     {
       "house": "Baratheon",
       "charFirstName": "Robert",
-      "abilities": [
-        "Warhammer",
-        "Whoring",
-        "F-ing"
-      ],
-      "parents": [
-        "Steffon Baratheon",
-        "Cassana Estermont"
-      ],
-      "siblings": [
-        "Stannis Baratheon",
-        "Renly Baratheon"
-      ],
+      "abilities": ["Warhammer", "Whoring", "F-ing"],
+      "parents": ["Steffon Baratheon", "Cassana Estermont"],
+      "siblings": ["Stannis Baratheon", "Renly Baratheon"],
       "actLastName": "Addy",
       "unid": "5E6D5DD5A4622EC688257E86005FE45E",
       "spouse": "Cersei Lannister",
@@ -862,10 +637,7 @@
     {
       "house": "Stark",
       "charFirstName": "Rodrik",
-      "abilities": [
-        "Swordplay",
-        "Master at Arms"
-      ],
+      "abilities": ["Swordplay", "Master at Arms"],
       "parents": [],
       "siblings": [],
       "actLastName": "Donachie",
@@ -880,17 +652,9 @@
     {
       "house": "NightsWatch",
       "charFirstName": "Samwell",
-      "abilities": [
-        "Cunning"
-      ],
-      "parents": [
-        "Randyll Tarly",
-        "Melessa Florent"
-      ],
-      "siblings": [
-        "Talla Tarly",
-        "Dickon Tarly"
-      ],
+      "abilities": ["Cunning"],
+      "parents": ["Randyll Tarly", "Melessa Florent"],
+      "siblings": ["Talla Tarly", "Dickon Tarly"],
       "actLastName": "Bradley",
       "unid": "34131E4A1B191F2788257E86005FE48F",
       "spouse": "",
@@ -903,10 +667,7 @@
     {
       "house": "Lannister",
       "charFirstName": "Sandor",
-      "abilities": [
-        "Swordplay",
-        "Savagery"
-      ],
+      "abilities": ["Swordplay", "Savagery"],
       "parents": [],
       "siblings": "Gregor Clegane",
       "actLastName": "McCann",
@@ -921,13 +682,8 @@
     {
       "house": "Stark",
       "charFirstName": "Sansa",
-      "abilities": [
-        "Charm"
-      ],
-      "parents": [
-        "Eddard Stark",
-        "Catelyn Tulley"
-      ],
+      "abilities": ["Charm"],
+      "parents": ["Eddard Stark", "Catelyn Tulley"],
       "siblings": [
         "Jon Snow",
         "Robb Stark",
@@ -947,10 +703,7 @@
     {
       "house": "Lannister",
       "charFirstName": "Shae",
-      "abilities": [
-        "Cunning",
-        "Sex"
-      ],
+      "abilities": ["Cunning", "Sex"],
       "parents": [],
       "siblings": [],
       "actLastName": "Kekilli",
@@ -965,16 +718,9 @@
     {
       "house": "Baratheon",
       "charFirstName": "Stannis",
-      "abilities": [
-        "War",
-        "Claim to the Iron Throne",
-        "Red Woman"
-      ],
+      "abilities": ["War", "Claim to the Iron Throne", "Red Woman"],
       "parents": [],
-      "siblings": [
-        "Robert",
-        "Renly"
-      ],
+      "siblings": ["Robert", "Renly"],
       "actLastName": "Dillane",
       "unid": "37F10FAA065E966788257E86005FE468",
       "spouse": "",
@@ -987,9 +733,7 @@
     {
       "house": "Stark",
       "charFirstName": "Talisa",
-      "abilities": [
-        "Love"
-      ],
+      "abilities": ["Love"],
       "parents": [],
       "siblings": [],
       "actLastName": "Chaplin",
@@ -1004,16 +748,9 @@
     {
       "house": "Greyjoy",
       "charFirstName": "Theon",
-      "abilities": [
-        "Swordplay",
-        "Cunning"
-      ],
+      "abilities": ["Swordplay", "Cunning"],
       "parents": "Balon Greyjoy\r\n",
-      "siblings": [
-        "Rodrik Greyjoy",
-        "Maron Greyjoy",
-        "Asha Greyjoy"
-      ],
+      "siblings": ["Rodrik Greyjoy", "Maron Greyjoy", "Asha Greyjoy"],
       "actLastName": "Allen",
       "unid": "F1D7D20DE3F5A75688257E86005FE469",
       "spouse": "",
@@ -1026,10 +763,7 @@
     {
       "house": "Other",
       "charFirstName": "Timett",
-      "abilities": [
-        "Barbarian",
-        "Fighter"
-      ],
+      "abilities": ["Barbarian", "Fighter"],
       "parents": "Timett",
       "siblings": [],
       "actLastName": "Winter",
@@ -1044,17 +778,9 @@
     {
       "house": "Lannister",
       "charFirstName": "Tommen",
-      "abilities": [
-        "Compassion"
-      ],
-      "parents": [
-        "Cersei Lannister",
-        "Jaime Lannister"
-      ],
-      "siblings": [
-        "Joffrey Baratheon",
-        "Myrcella Baratheon"
-      ],
+      "abilities": ["Compassion"],
+      "parents": ["Cersei Lannister", "Jaime Lannister"],
+      "siblings": ["Joffrey Baratheon", "Myrcella Baratheon"],
       "actLastName": "Wharry",
       "unid": "6B42511A88F2B81F88257E86005FE487",
       "spouse": "Margaery Tyrell",
@@ -1067,17 +793,9 @@
     {
       "house": "Lannister",
       "charFirstName": "Tyrion",
-      "abilities": [
-        "Cunning"
-      ],
-      "parents": [
-        "Tywin",
-        "Joanna"
-      ],
-      "siblings": [
-        "Jaime",
-        "Cersei"
-      ],
+      "abilities": ["Cunning"],
+      "parents": ["Tywin", "Joanna"],
+      "siblings": ["Jaime", "Cersei"],
       "actLastName": "Dinklage",
       "unid": "CCF9F8903967A1F388257E86005FE47C",
       "spouse": "Sansa Stark",
@@ -1090,10 +808,7 @@
     {
       "house": "Lannister",
       "charFirstName": "Tywin",
-      "abilities": [
-        "Battle Planning",
-        "Cunning"
-      ],
+      "abilities": ["Battle Planning", "Cunning"],
       "parents": [],
       "siblings": [],
       "actLastName": "Dance",
@@ -1103,19 +818,12 @@
       "title": "Lord",
       "actFirstName": "Charles",
       "home": "Casterly Rock",
-      "children": [
-        "Cersei",
-        "Jaime",
-        "Tyrion"
-      ]
+      "children": ["Cersei", "Jaime", "Tyrion"]
     },
     {
       "house": "Radical",
       "charFirstName": "Varys",
-      "abilities": [
-        "Cunning",
-        "Spycraft"
-      ],
+      "abilities": ["Cunning", "Spycraft"],
       "parents": [],
       "siblings": [],
       "actLastName": "Hill",
@@ -1130,18 +838,9 @@
     {
       "house": "Targaryen",
       "charFirstName": "Viserys",
-      "abilities": [
-        "Cunning",
-        "Malice"
-      ],
-      "parents": [
-        "Aerys Targaryen",
-        "Rhaella Targaryen"
-      ],
-      "siblings": [
-        "Rhaegar Targaryen",
-        "Daenerys Targaryen"
-      ],
+      "abilities": ["Cunning", "Malice"],
+      "parents": ["Aerys Targaryen", "Rhaella Targaryen"],
+      "siblings": ["Rhaegar Targaryen", "Daenerys Targaryen"],
       "actLastName": "Lloyd",
       "unid": "332104C395CD491388257E86005FE467",
       "spouse": "",
@@ -1154,10 +853,7 @@
     {
       "house": "Wildling",
       "charFirstName": "Ygritte",
-      "abilities": [
-        "Swordplay",
-        "Allegience"
-      ],
+      "abilities": ["Swordplay", "Allegience"],
       "parents": [],
       "siblings": [],
       "actLastName": "Leslie",
@@ -1172,10 +868,7 @@
     {
       "house": "NightsWatch",
       "charFirstName": "Yoren",
-      "abilities": [
-        "Speech",
-        "Fighting"
-      ],
+      "abilities": ["Speech", "Fighting"],
       "parents": [],
       "siblings": [],
       "actLastName": "Magee",

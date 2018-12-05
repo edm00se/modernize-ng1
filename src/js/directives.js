@@ -3,19 +3,23 @@ angular
   .module('westerosiApp')
 
   /*
-  *	Directives
-  */
+   *	Directives
+   */
 
   // navigation
   .directive('navBar', function() {
     return {
       restrict: 'E',
       template: require('../partials/nav.html'),
-      controller: ["$scope", "$location", function($scope, $location) {
-        $scope.isActive = function(route) {
-          return route === $location.path();
-        };
-      }]
+      controller: [
+        '$scope',
+        '$location',
+        function($scope, $location) {
+          $scope.isActive = function(route) {
+            return route === $location.path();
+          };
+        }
+      ]
     };
   })
 

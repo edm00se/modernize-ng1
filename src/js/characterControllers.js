@@ -3,8 +3,8 @@ angular
   .module('westerosiApp')
 
   /*
-  *	Character Controllers
-  */
+   *	Character Controllers
+   */
 
   //provies the controller to the app, which handles the interaction of data (model) with the view (a la MVC)
   .controller('CharacterListCtrl', [
@@ -269,7 +269,10 @@ angular
       };
 
       $scope.$on('$locationChangeStart', function(event) {
-        if ($scope.characterForm.$dirty && !confirm('Abandon unsaved changes?')) {
+        if (
+          $scope.characterForm.$dirty &&
+          !confirm('Abandon unsaved changes?')
+        ) {
           event.preventDefault();
         }
       });

@@ -6,10 +6,10 @@
     /*
      *	House Controllers
      */
-
+    
     //provies the controller to the app, which handles the interaction of data (model) with the view (a la MVC)
-    .controller('HouseListCtrl', ['$scope', '$state', '$http', '$filter', 'houseCollectionFactory',
-      function ($scope, $state, $http, $filter, houseCollectionFactory) {
+    .controller('HouseListCtrl', ['$scope', '$state', '$http', '$log', 'houseCollectionFactory',
+      function ($scope, $state, $http, $log, houseCollectionFactory) {
 
         //defines filter/search/etc. vars
         $scope.pageQty = 5; //detectPhone() ? 10 : 30;
@@ -26,33 +26,26 @@
         $scope.housesOfWesteros = [];
         //the factory is returning the promise of the $http, so handle success/error here
         houseCollectionFactory
-          .then(function (response, status, headers, config) {
+          .then(function (response) {
             if (!response.data.hasOwnProperty("dataAr")) {
               //loading by non-Domino method, probably json-server; just use the response
               $scope.housesOfWesteros = response.data;
             } else {
               $scope.housesOfWesteros = response.data.dataAr;
             }
-          }, function (data, status, headers, config) {
+          }).catch(function (err) {
             $scope.housesOfWesteros = null;
-            console.log("data: " + data);
-            console.log("status: " + status);
-            console.log("headers: " + headers);
-            console.log("config: " + JSON.parse(config));
+            $log.error('error: ', err);
           });
 
         $scope.removeHouse = function (unid) {
-          $http({
-            method: 'DELETE',
-            url: 'houses/' + unid
-          })
-            .then(function (data, status, headers, config) {
-              console.log("successfully deleted house with id: " + unid);
-            }, function (data, status, headers, config) {
+          $http.delete('houses/' + unid)
+            .then(function (res) {
+              $log.info("successfully deleted house with id: " + unid);
+            }).catch(function (err) {
               //might as well say something
-              console.log("error, status: " + status + "\nmessage: " + data);
-            })
-            .then(function () {
+              $log.error('error: ',err);
+            }).then(function () {
               $state.go('houses', {}, { reload: true });
             });
         };

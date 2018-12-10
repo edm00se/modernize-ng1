@@ -35,10 +35,9 @@
     "babel-jest": "23.6.0",
     "babel-plugin-ng-annotate": "0.3.2",
     "babel-plugin-syntax-decorators": "6.13.0",
-    "babel-polyfill": "6.26.0",
     "babel-preset-env": "1.7.0",
     "jest": "23.6.0",
-    "node-sass": "4.9.4",
+    "node-sass": "4.11.0",
     "parcel-bundler": "1.10.3",
     "prettier": "1.15.3",
     "rimraf": "2.6.2",
@@ -47,7 +46,7 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 10",
-    "ie 11"
+    "ie 11",
+    "not ie <= 10"
   ]
 }

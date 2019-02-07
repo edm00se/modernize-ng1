@@ -21,6 +21,8 @@
       - [ngMessages](#ngmessages)
       - [Using PostHTML](#using-posthtml)
     - [IE Support](#ie-support)
+      - [Install](#install)
+      - [Import](#import)
   - [Contribute What You've Found](#contribute-what-youve-found)
 
 ### Encapsulate for Bundling
@@ -198,6 +200,27 @@ module.exports = {
 ### IE Support
 
 Supporting Internet Explorer is about the worst possible thing. Sadly, there's no immediate way of doing this out of the box with Parcel, as [babel-polyfill][babel-polyfill] doesn't polyfill `Promise` or `fetch`, the APIs for both of which Parcel relies on for multiple bundle loading. I've documented this somewhat extensively in [an issue opened on Parcel's GitHub repo][parcel-ie-issue] and [a boiled down reproducible demo repo][parcel-ie-issue-repro]. This led me to create [parcel-plugin-goodie-bag][parcel-plugin-goodie-bag], which will install and auto-hook polyfills for `Promise` and `fetch`, as-needed. This solved my needs for supporting Internet Explorer in my day job's largest app.
+
+You'll also probably want/need to install and use [babel-polyfill][babel-polyfill], as anything like `Array.prototype.find` that IE doesn't support, won't work.
+
+#### Install
+
+```sh
+npm install --save-dev babel-polyfill
+```
+
+#### Import
+
+In your `main.js`:
+
+```js
+// auto polyfill
+import 'babel-polyfill';
+
+// libs
+import 'angular';
+//...
+```
 
 ## Contribute What You've Found
 

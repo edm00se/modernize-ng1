@@ -72,6 +72,10 @@ self.__precacheManifest = [
     "revision": "89889688147bd7575d6327160d64e760"
   },
   {
+    "url": "goodie-bag.min.js",
+    "revision": "4b41b7918772ee33def742cbaf34bd32"
+  },
+  {
     "url": "house.4753fcb5.html",
     "revision": "e5921b9d4460410fe1436f40382b215a"
   },
@@ -81,7 +85,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "61c0714f8cbfe648326181ad2b128fec"
+    "revision": "b79aa44e9e41f023aef64938e98f3304"
   },
   {
     "url": "main.6793be01.js",

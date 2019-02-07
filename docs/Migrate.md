@@ -6,13 +6,22 @@
 
 ## Major Steps
 
-- [Encapsulate for Bundling](#encapsulate-for-bundling)
-- [Dependencies](#dependencies)
-- [Font Awesome](#font-awesome), special considerations
-- [Babel Configuration](#babel-configuration)
-- [Asset Importing](#asset-importing)
-- [Updating the Router](#updating-the-router)
-- [ngMessages](#ngmessages)
+- [Migrating Your App](#migrating-your-app)
+  - [Major Steps](#major-steps)
+    - [Encapsulate for Bundling](#encapsulate-for-bundling)
+    - [Dependencies](#dependencies)
+    - [Font Awesome](#font-awesome)
+    - [Babel Configuration](#babel-configuration)
+    - [Asset Importing](#asset-importing)
+      - [CSS](#css)
+      - [JavaScript](#javascript)
+        - [Bootstrap Concerns](#bootstrap-concerns)
+    - [Updating the Router](#updating-the-router)
+    - [Included Partials](#included-partials)
+      - [ngMessages](#ngmessages)
+      - [Using PostHTML](#using-posthtml)
+    - [IE Support](#ie-support)
+  - [Contribute What You've Found](#contribute-what-youve-found)
 
 ### Encapsulate for Bundling
 
@@ -186,6 +195,10 @@ module.exports = {
 };
 ```
 
+### IE Support
+
+Supporting Internet Explorer is about the worst possible thing. Sadly, there's no immediate way of doing this out of the box with Parcel, as [babel-polyfill][babel-polyfill] doesn't polyfill `Promise` or `fetch`, the APIs for both of which Parcel relies on for multiple bundle loading. I've documented this somewhat extensively in [an issue opened on Parcel's GitHub repo][parcel-ie-issue] and [a boiled down reproducible demo repo][parcel-ie-issue-repro]. This led me to create [parcel-plugin-goodie-bag][parcel-plugin-goodie-bag], which will install and auto-hook polyfills for `Promise` and `fetch`, as-needed. This solved my needs for supporting Internet Explorer in my day job's largest app.
+
 ## Contribute What You've Found
 
 Have You Found Anything Else?
@@ -214,3 +227,7 @@ Feel free to reach out if there's something more that's unaccounted for. [Open a
 [ng-messages-template]: https://docs.angularjs.org/api/ngMessages#reusing-and-overriding-messages
 [open-issue]: https://github.com/edm00se/modernize-ng1/issues/new
 [open-pr]: https://github.com/edm00se/modernize-ng1/compare
+[babel-polyfill]: https://babeljs.io/docs/en/next/babel-polyfill.html
+[parcel-ie-issue]: https://github.com/parcel-bundler/parcel/issues/2364
+[parcel-ie-issue-repro]: https://github.com/edm00se/parcel-ie11-issue-demo
+[parcel-plugin-goodie-bag]: https://github.com/edm00se/parcel-plugin-goodie-bag

@@ -1,7 +1,7 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "modules": false,
         "targets": {
@@ -16,7 +16,6 @@
     ]
   ],
   "plugins": [
-    "syntax-decorators",
-    "ng-annotate"
+    "angularjs-annotate",
   ]
 }

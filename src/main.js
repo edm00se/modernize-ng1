@@ -1,5 +1,5 @@
 // auto polyfill
-import 'babel-polyfill';
+import '@babel/polyfill';
 
 // libs
 import 'angular';

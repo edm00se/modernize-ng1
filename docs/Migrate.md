@@ -42,11 +42,11 @@ Development dependencies of note:
 - [`parcel-bundler`][parcel-main], where the magic happens
 - babel configuration, the [`.babelrc`](../.babelrc)
   - babel comes with parcel, you'll note the [`package.json`](../package.json) only lists the things I'm adding
-  - the env and stage-2 presets, again parcel comes with babel's env preset, but since I'm (optionally) adding stage-2 and the ng-annotate plugin
-  - the plugins needed are [ng-annotate][npm-babel-plugin-ng-annotate] (which requires the syntax decorators babel plugin)
-    - the ng-annotate babel plugin does some automagic handling to allow for smarter minification/uglification of the source JavaScript, a la ng-annotate
+  - the env preset, again parcel comes with babel's env preset (`@babel/preset-env`), but since I'm (optionally) adding the angularjs-annotate plugin
+  - the plugins needed are ~~[ng-annotate][npm-babel-plugin-ng-annotate] (which requires the syntax decorators babel plugin)~~ [babel-plugin-angularjs-annotate][npm-nw-ng-annotate]
+    - the angularjs-annotate babel plugin does some automagic handling to allow for smarter minification/uglification of the source JavaScript, a la ng-annotate
     - to see an example of how this works out, check out [the ng-annotate babel plugin in action][ng-annotate-plguin-in-action]
-- [node-sass for scss compilation][parcel-sass]
+- [sass for scss compilation][parcel-sass]
 - optional\*: [`gh-pages`][npm-gh-pages] and [`rimraf`][npm-rimraf] to aid in cleaning, building, and deploying of the site to [GitHub Pages][gh-pages]
 
 ### Font Awesome
@@ -66,14 +66,11 @@ This is where the most actual configuration occurs. This has to do with the need
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env"
       // ...snipped for simplicity
-    ],
-    "stage-2"
   ],
   "plugins": [
-    "syntax-decorators",
-    "ng-annotate"
+    "angularjs-annotate"
   ]
 }
 ```
@@ -199,9 +196,9 @@ module.exports = {
 
 ### IE Support
 
-Supporting Internet Explorer is about the worst possible thing. Sadly, there's no immediate way of doing this out of the box with Parcel, as [babel-polyfill][babel-polyfill] doesn't polyfill `Promise` or `fetch`, the APIs for both of which Parcel relies on for multiple bundle loading. I've documented this somewhat extensively in [an issue opened on Parcel's GitHub repo][parcel-ie-issue] and [a boiled down reproducible demo repo][parcel-ie-issue-repro]. This led me to create [parcel-plugin-goodie-bag][parcel-plugin-goodie-bag], which will install and auto-hook polyfills for `Promise` and `fetch`, as-needed. This solved my needs for supporting Internet Explorer in my day job's largest app.
+Supporting Internet Explorer is about the worst possible thing. Sadly, there's no immediate way of doing this out of the box with Parcel, as [@babel/polyfill][babel-polyfill] doesn't polyfill ~~`Promise` or~~ `fetch` (the v7 babel polyfill won't polyfill `Promise` before Parcel needs it), the APIs for both `Promise` and `fetch` are relied on by Parcel for multiple bundle loading, which is triggered by any HTML partial file `require` statements. I've documented this somewhat extensively in [an issue opened on Parcel's GitHub repo][parcel-ie-issue] and [a boiled down reproducible demo repo][parcel-ie-issue-repro]. This led me to create [parcel-plugin-goodie-bag][parcel-plugin-goodie-bag], which will install and auto-hook polyfills for `Promise` and `fetch`, as-needed, prior to Parcel's generated logic firing. This solved my needs for supporting Internet Explorer in my day job's largest app.
 
-You'll also probably want/need to install and use [babel-polyfill][babel-polyfill], as anything like `Array.prototype.find` that IE doesn't support, won't work.
+You'll also probably want/need to install and use [@babel/polyfill][babel-polyfill], as anything like `Array.prototype.find` that IE doesn't support, won't work.
 
 #### Install
 
@@ -215,7 +212,7 @@ In your `main.js`:
 
 ```js
 // auto polyfill
-import 'babel-polyfill';
+import '@babel/polyfill';
 
 // libs
 import 'angular';
@@ -233,7 +230,8 @@ Feel free to reach out if there's something more that's unaccounted for. [Open a
 [npm]: https://www.npmjs.com/
 [parcel-issue-fa-4]: https://github.com/parcel-bundler/parcel/issues/763
 [parcel-issue-fa-5]: https://github.com/parcel-bundler/parcel/issues/764
-[npm-babel-plugin-ng-annotate]: http://npm.im/babel-plugin-ng-annotate
+[npm-babel-plugin-ng-annotate]: https://npm.im/babel-plugin-ng-annotate
+[npm-nw-ng-annotate]: https://npm.im/babel-plugin-angularjs-annotate
 [ng-annotate-plguin-in-action]: https://github.com/edm00se/modernize-ng1/issues/2#issuecomment-382751204
 [parcel-sass]: https://parceljs.org/assets.html#scss
 [npm-gh-pages]: http://npm.im/gh-pages

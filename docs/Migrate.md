@@ -131,7 +131,7 @@ require('bootstrap');
 
 ### Updating the Router
 
-Parcel currently has [an issue importing html from js][parcel-issue-html-from-js]. This specifically becomes [a problem for AngularJS 1.x applications][parcel-issue-angular-router], regardless of whether you use [ngRoute][ng-route] or [ui-router][ui-router], if you make use of `templateUrl` with an html mpartial.
+~~Parcel currently has [an issue importing html from js][parcel-issue-html-from-js]. This specifically becomes [a problem for AngularJS 1.x applications][parcel-issue-angular-router], regardless of whether you use [ngRoute][ng-route] or [ui-router][ui-router], if you make use of `templateUrl` with an html mpartial.~~ The way parcel detects assets is through explicit inclusion, generally through the required tree of assets. AngularJS apps often make use of separate HTML partial files as templates, such as with `templateUrl`; without statically copying those files (you can configure [a plugin to do this](https://github.com/elwin013/parcel-plugin-static-files-copy)), this means they won't be available because they haven't been `require`d/`import`ed into the app. We can get around this by using parcel's ability to require those assets, which resolves them during build time. This applies to any `templateUrl` or `ng-messages` directive ([see below for ngMessages concers](#ngmessages)).
 
 The solution implemented here was to make use of the fact that parcel runs with a node context. As [the assets page of the parcel documentaton][parcel-docs-assets] states, we can make use of `require`.
 

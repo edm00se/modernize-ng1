@@ -23,7 +23,7 @@
     "angular": "1.7.7",
     "angular-aria": "1.7.7",
     "angular-messages": "1.7.7",
-    "angular-sanitize": "1.7.7",
+    "angular-sanitize": "1.7.8",
     "bootstrap": "3.4.1",
     "bootswatch": "3.4.0",
     "font-awesome": "4.7.0",

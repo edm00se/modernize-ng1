@@ -10,6 +10,7 @@
     "build": "parcel build ./src/index.html --public-url .",
     "build:sw": "rimraf dist/sw.js && workbox generateSW config/workbox-config.js",
     "build:travis": "parcel build ./src/index.html --public-url . --log-level 2",
+    "update-caniuse": "npm update caniuse-lite browserslist",
     "deploy": "npm run build && gh-pages -d dist",
     "test": "jest --config config/tests/jest.conf.js",
     "test:watch": "npm test -- --watch"
@@ -37,6 +38,7 @@
     "babel-jest": "24.1.0",
     "babel-plugin-angularjs-annotate": "0.10.0",
     "jest": "24.1.0",
+    "npm-run-all": "4.1.5",
     "parcel-bundler": "1.12.4",
     "parcel-plugin-goodie-bag": "1.0.1",
     "prettier": "1.15.3",

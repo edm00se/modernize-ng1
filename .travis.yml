@@ -10,6 +10,7 @@ branches:
   only:
   - master
 script:
+  - npm run update-caniuse
   - npm test
   - npm run build:travis
   - npm run build:sw

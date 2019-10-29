@@ -9,9 +9,8 @@
     "format": "prettier --write \"src/**/*.{js,json}\"",
     "build": "parcel build ./src/index.html --public-url .",
     "build:sw": "rimraf dist/sw.js && workbox generateSW config/workbox-config.js",
-    "build:travis": "parcel build ./src/index.html --public-url . --log-level 2",
-    "update-caniuse": "npm update caniuse-lite browserslist",
-    "deploy": "npm run build && gh-pages -d dist",
+    "build:prod": "run-s test build:quiet build:sw",
+    "build:quiet": "parcel build ./src/index.html --public-url . --log-level 2",
     "test": "jest --config config/tests/jest.conf.js",
     "test:watch": "npm test -- --watch"
   },

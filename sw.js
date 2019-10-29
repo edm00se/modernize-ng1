@@ -11,7 +11,13 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
@@ -73,7 +79,7 @@ self.__precacheManifest = [
   },
   {
     "url": "goodie-bag.min.js",
-    "revision": "4b41b7918772ee33def742cbaf34bd32"
+    "revision": "2b7d01fc658ed1c49e9d87db8ae1c0fe"
   },
   {
     "url": "house.6e5da995.html",
@@ -85,20 +91,19 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "3c57436c58d9a08133b442d2e36a176c"
+    "revision": "0cd20b5d080b7c0cf19d370f08a5e0cf"
   },
   {
-    "url": "main.4439a96a.css",
-    "revision": "9fe576a58334ecf834acd15f597af4e6"
+    "url": "main.63f71bc1.css",
+    "revision": "9e43223925a948c6010715d59a0436ea"
   },
   {
-    "url": "main.823eeeeb.js",
-    "revision": "92707c1a3390f8f3506fd3f3e526ae4f"
+    "url": "main.fb52a514.js",
+    "revision": "d8bfc928a6434dd98f0709bfa7e120ec"
   },
   {
     "url": "nav.48cbb813.html",
     "revision": "73b354c34a7587b09cb234fe4fcf146d"
   }
 ].concat(self.__precacheManifest || []);
-workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

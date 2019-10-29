@@ -43,7 +43,7 @@
     "parcel-bundler": "1.12.4",
     "parcel-plugin-goodie-bag": "1.0.1",
     "prettier": "1.15.3",
-    "rimraf": "2.6.2",
+    "rimraf": "3.0.0",
     "sass": "1.17.0",
     "workbox-cli": "3.6.3"
   },

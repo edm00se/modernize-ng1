@@ -30,7 +30,7 @@
     "ng-tags-input": "3.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.7",
+    "@babel/core": "^7.8.4",
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.7",
     "angular-mocks": "^1.7.9",

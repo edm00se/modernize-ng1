@@ -18,7 +18,7 @@
   "author": "Eric McCormick (https://edm00se.codes/)",
   "license": "MIT",
   "dependencies": {
-    "@uirouter/angularjs": "1.0.24",
+    "@uirouter/angularjs": "1.0.25",
     "angular": "1.7.9",
     "angular-aria": "^1.7.9",
     "angular-messages": "^1.7.9",

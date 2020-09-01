@@ -12,6 +12,7 @@ jobs:
         id: waitFor200
         with:
           site_name: "modernize-ng1"
+          max_timeout: 240
       - name: Running Page Speed Insights
         uses: jakepartusch/psi-action@v1
         id: psi

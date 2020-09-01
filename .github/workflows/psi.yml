@@ -7,12 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     name: Running PageSpeed Insights
     steps:
-     - name: Checkout
-       uses: actions/checkout@v1
+    - name: Waiting for 200 from the Netlify Preview
+      uses: jakepartusch/wait-for-netlify-action@v1
+      id: waitFor200
+      with:
+      site_name: "modernize-ng1"
      - name: Running Page Speed Insights
        uses: jakepartusch/psi-action@v1
        id: psi
        with:
-         url: "https://modernize-ng1.edm00se.codes"
+         url: ${{ steps.waitFor200.outputs.url }}
          threshold: 50
          strategy: mobile

@@ -11,7 +11,7 @@
     "build:sw": "rimraf dist/sw.js && workbox generateSW config/workbox-config.js",
     "build:prod": "run-s test build:quiet build:sw",
     "build:quiet": "parcel build ./src/index.html --public-url . --log-level 2",
-    "test": "jest --config config/tests/jest.conf.js",
+    "test": "jest",
     "test:watch": "npm test -- --watch"
   },
   "keywords": [],
@@ -50,5 +50,24 @@
     "last 2 versions",
     "ie 11",
     "not ie <= 10"
-  ]
+  ],
+  "jest": {
+    "rootDir": "./",
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.html$": "<rootDir>/config/tests/html-loader.js"
+    },
+    "setupFiles": ["<rootDir>/config/tests/setup"],
+    "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/config/tests/coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!**/node_modules/**",
+      "!src/main.js",
+      "!src/sw.js"
+    ]
+  }
 }

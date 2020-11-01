@@ -19,7 +19,7 @@
   "license": "MIT",
   "dependencies": {
     "@uirouter/angularjs": "^1.0.28",
-    "angular": "1.8.0",
+    "angular": "1.8.2",
     "angular-aria": "^1.8.0",
     "angular-messages": "^1.8.0",
     "angular-sanitize": "^1.8.0",

@@ -21,7 +21,7 @@
     "@uirouter/angularjs": "^1.0.28",
     "angular": "1.8.0",
     "angular-aria": "^1.8.0",
-    "angular-messages": "^1.8.0",
+    "angular-messages": "^1.8.2",
     "angular-sanitize": "^1.8.0",
     "bootstrap": "3.4.1",
     "bootswatch": "3.4.1",

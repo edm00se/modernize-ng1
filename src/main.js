@@ -21,13 +21,16 @@ import './js/houseControllers';
 // scss
 import './main.scss';
 
+// helper
+const isProd = process.env.NODE_ENV === 'production';
+
 // funky libs
 const $ = require('jquery');
 window.$ = $;
 window.jQuery = $;
 require('bootstrap');
 
-if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+if ('serviceWorker' in navigator && isProd) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
       .register('sw.js')

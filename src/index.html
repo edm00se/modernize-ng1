@@ -23,6 +23,24 @@
 		<p ng-message="required">This field is required</p>
 		<p ng-message="email">This needs to be a valid email</p>
 	</script>
+
+	<script>
+		if(process.env.NODE_ENV === 'production'){
+			// console.log('prod');
+			if ('serviceWorker' in navigator) {
+				// console.log('sw capable');
+				window.addEventListener('load', () => {
+					// console.log('window load');
+					navigator.serviceWorker
+						.register('sw.js')
+						.then(r => {
+							console.log('service worker registered in scope: ', r.scope);
+						})
+						.catch(e => console.log('SW error: ', e));
+				});
+			}
+		}
+	</script>
 </body>
 
 </html>

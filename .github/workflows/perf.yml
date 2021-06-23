@@ -18,11 +18,12 @@ jobs:
       - name: Build
         run: |
           npm run build
-      - name: Waiting for 200 from the Netlify Preview
-        uses: jakepartusch/wait-for-netlify-action@v1
+      - name: Waiting for 200 from the Vercel Preview
+        uses: patrickedqvist/wait-for-vercel-preview@v1.1.1
         id: waitFor200
         with:
-          site_name: "modernize-ng1"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_timeout: 60
       - name: Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.3.x

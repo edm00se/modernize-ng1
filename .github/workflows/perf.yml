@@ -37,3 +37,4 @@ jobs:
           url: ${{ steps.waitFor200.outputs.url }}
           threshold: 50
           strategy: mobile
+          key: ${{ secrets.APIKEY }}

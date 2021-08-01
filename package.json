@@ -42,7 +42,7 @@
     "parcel-plugin-goodie-bag": "2.0.0",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
-    "sass": "^1.35.1",
+    "sass": "^1.37.0",
     "workbox-cli": "^6.1.1"
   },
   "browserslist": [

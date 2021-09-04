@@ -43,7 +43,7 @@
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "sass": "^1.37.0",
-    "workbox-cli": "^6.1.1"
+    "workbox-cli": "^6.2.4"
   },
   "browserslist": [
     "> 1%",

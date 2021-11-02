@@ -31,7 +31,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/polyfill": "^7.12.1",
-    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-env": "^7.16.0",
     "angular-mocks": "^1.8.2",
     "babel-jest": "^27.2.4",
     "babel-plugin-angularjs-annotate": "0.10.0",

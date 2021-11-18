@@ -1,3 +1,9 @@
+## Archival
+
+This was built using Parcel v1. Parcel v2 has been released, is a great development tool, and probably works nothing like it does with this repo. Additionally, the out of the box tree shaking likely doesn't work without major efforts on AngularJS (1.x) and source code, so I no longer advise attempting this with such an out-dated application, AngularJS (1.x), or Parcel. Upgrade your applications! This was only ever an intermediate effort to "make things suck less".
+
+---
+
 TL;DR: You can make an AngularJS 1.x app suck _a lot less_, with ES6+, SCSS, and a local development server, courtesy of Parcel.
 
 # Modernize AngularJS 1.x With [Parcel][parcel]

@@ -33,7 +33,7 @@
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.16.0",
     "angular-mocks": "^1.8.2",
-    "babel-jest": "^27.3.1",
+    "babel-jest": "^27.5.1",
     "babel-plugin-angularjs-annotate": "0.10.0",
     "jest": "^26.6.3",
     "jquery": "^3.6.0",
